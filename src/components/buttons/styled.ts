@@ -8,9 +8,10 @@ export const CustomButton = styled.button<{ outlined?: boolean }>`
   align-items: center;
   justify-content: center;
   font-size: ${pxToRem(14)};
-  line-height: ${pxToRem(28)};
+  line-height: ${pxToRem(20)};
+  padding: ${pxToRem(14)} ${pxToRem(36)};
   border-radius: 37px;
-  padding: ${pxToRem(10)} ${pxToRem(36)};
+  border: 1px solid inherit;
   transition: all 0.3s ease;
   outline: none;
   cursor: pointer;
@@ -20,12 +21,15 @@ export const CustomButton = styled.button<{ outlined?: boolean }>`
   }
 
   ${({ theme }) => css`
+    border: 1px solid ${theme.colors.orange};
     background-color: ${theme.colors.orange};
     color: ${theme.colors.white};
-    border: none;
 
-    &:hover {
-      background: ${LightenDarkenColor(theme.colors.orange, -40)};
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid ${LightenDarkenColor(theme.colors.orange, -40)};
+        background: ${LightenDarkenColor(theme.colors.orange, -40)};
+      }
     }
   `}
 
@@ -37,8 +41,13 @@ export const CustomButton = styled.button<{ outlined?: boolean }>`
       color: ${theme.colors.green};
 
       &:hover {
+        border-color: ${theme.colors.green};
         background: ${theme.colors.green};
         color: ${theme.colors.white};
       }
     `}
+  
+  @media screen and (max-width: 768px) {
+    min-height: 40px;
+  }
 `

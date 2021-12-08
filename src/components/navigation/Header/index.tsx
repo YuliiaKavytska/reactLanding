@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useLockBodyScroll, useToggle, useWindowScroll, useWindowSize } from 'react-use'
 
 import { Container } from 'components/containers/Container/styled'
 
-import logoIcon from 'assets/images/common/logo.svg'
+import { ReactComponent as Logo } from 'assets/images/common/logo.svg'
 
-import { HeaderContainer, Item, Logo, Navigation, SideNavigation, StyledHeader } from './styled'
+import Burger from '../Burger'
+
+import { HeaderContainer, Item, LogoLink, Navigation, NavigationList, SideNavigation, StyledHeader } from './styled'
 
 export const HeaderNavigation = () => {
   return (
@@ -19,17 +21,29 @@ export const HeaderNavigation = () => {
 }
 
 const Header = () => {
+  const [active, toggleActive] = useToggle(false)
+  const { width, height } = useWindowSize()
+  const { x, y } = useWindowScroll()
+  useLockBodyScroll(active)
+
+  useEffect(() => {
+    toggleActive(false)
+  }, [width, height])
+
   return (
-    <StyledHeader>
+    <StyledHeader active={active} darken={y}>
       <Container>
         <HeaderContainer>
-          <Link to="/">
-            <Logo src={logoIcon} alt="logotype" />
-          </Link>
-          <HeaderNavigation />
+          <LogoLink to="/">
+            <Logo />
+          </LogoLink>
+          <NavigationList>
+            <HeaderNavigation />
+          </NavigationList>
+          <Burger active={active} toggleActive={toggleActive} />
         </HeaderContainer>
       </Container>
-      <SideNavigation>
+      <SideNavigation open={active}>
         <HeaderNavigation />
       </SideNavigation>
     </StyledHeader>

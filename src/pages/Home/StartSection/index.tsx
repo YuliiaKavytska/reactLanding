@@ -1,6 +1,9 @@
 import React from 'react'
 
-import Button from 'components/Buttons'
+import Typewriter from 'typewriter-effect'
+
+import AnimatedText from 'components/animatedText'
+import Button from 'components/buttons'
 import { Container } from 'components/containers/Container/styled'
 
 import { Actions, Content, Section, Subtitle, Title } from './styled'
@@ -10,10 +13,18 @@ const StartSection = () => {
     <Section>
       <Container>
         <Content>
-          <Title>Finance and Consultancy Solution</Title>
+          <Title>
+            <AnimatedText>Finance and Consultancy Solution</AnimatedText>
+          </Title>
           <Subtitle>
-            We know how large objects will act,
-            <br /> but things on a small scale.
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('We know how large objects will act, but things on a small scale.')
+                  .start()
+                  .changeDelay(0.1)
+              }}
+            />
           </Subtitle>
           <Actions>
             <Button>Get Quote Now</Button>
