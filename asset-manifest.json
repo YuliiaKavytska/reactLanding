@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/reactLanding/static/js/main.724babf1.chunk.js",
-    "main.js.map": "/reactLanding/static/js/main.724babf1.chunk.js.map",
+    "main.js": "/reactLanding/static/js/main.2089116a.chunk.js",
+    "main.js.map": "/reactLanding/static/js/main.2089116a.chunk.js.map",
     "runtime-main.js": "/reactLanding/static/js/runtime-main.e6a005e4.js",
     "runtime-main.js.map": "/reactLanding/static/js/runtime-main.e6a005e4.js.map",
     "static/css/2.561d7928.chunk.css": "/reactLanding/static/css/2.561d7928.chunk.css",
-    "static/js/2.384a90e7.chunk.js": "/reactLanding/static/js/2.384a90e7.chunk.js",
-    "static/js/2.384a90e7.chunk.js.map": "/reactLanding/static/js/2.384a90e7.chunk.js.map",
+    "static/js/2.eec8b413.chunk.js": "/reactLanding/static/js/2.eec8b413.chunk.js",
+    "static/js/2.eec8b413.chunk.js.map": "/reactLanding/static/js/2.eec8b413.chunk.js.map",
     "index.html": "/reactLanding/index.html",
     "static/css/2.561d7928.chunk.css.map": "/reactLanding/static/css/2.561d7928.chunk.css.map",
-    "static/js/2.384a90e7.chunk.js.LICENSE.txt": "/reactLanding/static/js/2.384a90e7.chunk.js.LICENSE.txt",
+    "static/js/2.eec8b413.chunk.js.LICENSE.txt": "/reactLanding/static/js/2.eec8b413.chunk.js.LICENSE.txt",
     "static/media/1.189299ff.svg": "/reactLanding/static/media/1.189299ff.svg",
     "static/media/2.8bd4945a.svg": "/reactLanding/static/media/2.8bd4945a.svg",
     "static/media/3.3c0fbf87.svg": "/reactLanding/static/media/3.3c0fbf87.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.e6a005e4.js",
     "static/css/2.561d7928.chunk.css",
-    "static/js/2.384a90e7.chunk.js",
-    "static/js/main.724babf1.chunk.js"
+    "static/js/2.eec8b413.chunk.js",
+    "static/js/main.2089116a.chunk.js"
   ]
 }
