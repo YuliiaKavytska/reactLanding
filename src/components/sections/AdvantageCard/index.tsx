@@ -9,14 +9,13 @@ interface IAdvantageCard {
     Icon: any
     number: number
     suffix: string
-    decimal: boolean
     title: string
   }
 }
 
 const AdvantageCard: FC<IAdvantageCard> = ({ item: Item }) => {
   const [animated, setAnimated] = useState(false)
-  const countUpRef = React.useRef(null)
+  const countUpRef = React.useRef<any>(null)
   const intersectionRef = React.useRef(null)
   const intersection = useIntersection(intersectionRef, {
     root: null,
@@ -30,8 +29,6 @@ const AdvantageCard: FC<IAdvantageCard> = ({ item: Item }) => {
     end: Item.number,
     delay: 0,
     duration: 2,
-    decimals: Item.decimal ? 2 : 0,
-    decimal: ',',
     separator: ' ',
     suffix: Item.suffix,
     startOnMount: false

@@ -22,13 +22,13 @@ export const HeaderNavigation = () => {
 
 const Header = () => {
   const [active, toggleActive] = useToggle(false)
-  const { width, height } = useWindowSize()
-  const { x, y } = useWindowScroll()
+  const { width } = useWindowSize()
+  const { y } = useWindowScroll()
   useLockBodyScroll(active)
 
   useEffect(() => {
-    toggleActive(false)
-  }, [width, height])
+    active && toggleActive(false)
+  }, [width])
 
   return (
     <StyledHeader active={active} darken={y}>

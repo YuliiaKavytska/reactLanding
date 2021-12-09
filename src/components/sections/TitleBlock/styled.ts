@@ -8,6 +8,11 @@ export const Title = styled.h3`
   line-height: ${pxToRem(57)};
   letter-spacing: 0.2px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${pxToRem(32)};
+    line-height: ${pxToRem(40)};
+  }
 `
 
 export const SubTitle = styled.h4`
@@ -19,4 +24,9 @@ export const SubTitle = styled.h4`
   text-align: center;
   max-width: 470px;
   margin: 10px auto 0;
+
+  @media screen and (max-width: 768px) {
+    font-weight: 400;
+    line-height: ${pxToRem(18)};
+  }
 `

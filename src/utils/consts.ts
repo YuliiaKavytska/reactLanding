@@ -2,6 +2,9 @@ import { ReactComponent as icon1 } from 'assets/images/common/1.svg'
 import { ReactComponent as icon2 } from 'assets/images/common/2.svg'
 import { ReactComponent as icon3 } from 'assets/images/common/3.svg'
 import { ReactComponent as FirstIcon } from 'assets/images/common/4.svg'
+import { ReactComponent as SecondIcon } from 'assets/images/common/5.svg'
+import { ReactComponent as ThirdIcon } from 'assets/images/common/6.svg'
+import { ReactComponent as ForthIcon } from 'assets/images/common/7.svg'
 
 export const blockTitles = [
   {
@@ -35,28 +38,24 @@ export const advantageList = [
     Icon: FirstIcon,
     number: 972,
     suffix: ' +',
-    decimal: false,
     title: 'Consumer Products'
   },
   {
-    Icon: FirstIcon,
+    Icon: SecondIcon,
     number: 181,
     suffix: ' +',
-    decimal: false,
     title: 'Financial Services '
   },
   {
-    Icon: FirstIcon,
+    Icon: ThirdIcon,
     number: 98,
     suffix: ' %',
-    decimal: true,
     title: 'Environmental '
   },
   {
-    Icon: FirstIcon,
+    Icon: ForthIcon,
     number: 746,
     suffix: ' +',
-    decimal: false,
     title: 'Business & Finance '
   }
 ]

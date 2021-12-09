@@ -1,12 +1,16 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
+import Tilt from 'react-parallax-tilt'
+import { useMedia } from 'react-use'
 
 import { Container } from 'components/containers/Container/styled'
 import { benefitsList } from 'utils/consts'
 
-import { BenefitsRow, BenefitsWrap, Card, Description, Icon, Title } from './styled'
+import { BenefitsRow, BenefitsWrap, Card, Description, Title } from './styled'
 
 const Benefits = () => {
+  const isPhone = useMedia('(max-width: 480px)')
+
   return (
     <BenefitsWrap>
       <Container>
@@ -19,13 +23,13 @@ const Benefits = () => {
               animateOnce
               delay={500 + index * 100}
             >
-              <Card>
-                <Icon>
+              <Tilt tiltEnable={!isPhone} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                <Card>
                   <Item.Icon />
-                </Icon>
-                <Title>{Item.title}</Title>
-                <Description>{Item.text}</Description>
-              </Card>
+                  <Title>{Item.title}</Title>
+                  <Description>{Item.text}</Description>
+                </Card>
+              </Tilt>
             </ScrollAnimation>
           ))}
         </BenefitsRow>
