@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { LightenDarkenColor, pxToRem } from 'utils/helpers'
 
-export const CustomButton = styled.button<{ outlined?: boolean }>`
+export const CustomButton = styled.button<{ outlined?: boolean; squared?: boolean }>`
   min-width: 100px;
   display: flex;
   align-items: center;
@@ -45,6 +45,12 @@ export const CustomButton = styled.button<{ outlined?: boolean }>`
         background: ${theme.colors.green};
         color: ${theme.colors.white};
       }
+    `}
+  
+  ${({ squared }) =>
+    squared &&
+    css`
+      border-radius: 5px;
     `}
   
   @media screen and (max-width: 768px) {

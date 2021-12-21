@@ -36,6 +36,9 @@ export const Content = styled.div`
 
   @media screen and (max-width: 768px) {
     padding-top: ${pxToRem(30)};
+  }
+
+  @media screen and (min-width: 480px) {
     max-width: 400px;
   }
 `

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from 'styles/Global'
@@ -15,14 +15,14 @@ import 'animate.css/animate.compat.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <App />
         </ThemeProvider>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

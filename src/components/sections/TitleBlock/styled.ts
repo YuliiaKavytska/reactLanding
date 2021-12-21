@@ -10,8 +10,8 @@ export const Title = styled.h3`
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    font-size: ${pxToRem(32)};
-    line-height: ${pxToRem(40)};
+    font-size: ${pxToRem(30)};
+    line-height: ${pxToRem(38)};
   }
 `
 

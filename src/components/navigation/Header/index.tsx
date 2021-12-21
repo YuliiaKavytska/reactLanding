@@ -6,19 +6,9 @@ import { Container } from 'components/containers/Container/styled'
 import { ReactComponent as Logo } from 'assets/images/common/logo.svg'
 
 import Burger from '../Burger'
+import { HeaderNavigation } from '../HeaderNavigation'
 
-import { HeaderContainer, Item, LogoLink, Navigation, NavigationList, SideNavigation, StyledHeader } from './styled'
-
-export const HeaderNavigation = () => {
-  return (
-    <Navigation>
-      <Item>Home</Item>
-      <Item>Product</Item>
-      <Item>Pricing</Item>
-      <Item>Contact</Item>
-    </Navigation>
-  )
-}
+import { HeaderContainer, LogoLink, NavigationList, SideNavigation, StyledHeader } from './styled'
 
 const Header = () => {
   const [active, toggleActive] = useToggle(false)
@@ -40,7 +30,7 @@ const Header = () => {
           <NavigationList>
             <HeaderNavigation />
           </NavigationList>
-          <Burger active={active} toggleActive={toggleActive} />
+          <Burger active={active} toggleActive={toggleActive} darken={y} />
         </HeaderContainer>
       </Container>
       <SideNavigation open={active}>

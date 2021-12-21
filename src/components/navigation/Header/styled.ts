@@ -40,8 +40,9 @@ export const StyledHeader = styled.header<{ active: boolean; darken: number }>`
     color: ${theme.colors.gray[1]};
   `}
 
-  ${({ darken, theme }) =>
+  ${({ darken, active, theme }) =>
     darken &&
+    !active &&
     css`
       color: ${darken > 50 && '#fff'};
       background: rgba(${hexToRgb(theme.colors.green)}, ${darken < 100 ? darken / 100 - 0.4 : 0.6});
@@ -80,18 +81,7 @@ export const NavigationList = styled.div`
   }
 `
 
-export const Navigation = styled.ul`
-  display: flex;
-  height: 100%;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-`
-
 export const Item = styled.li<{ active?: boolean }>`
-  margin-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,6 +95,10 @@ export const Item = styled.li<{ active?: boolean }>`
     &:hover {
       color: ${({ theme }) => theme.colors.orange};
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
   }
 
   &::after {
@@ -142,7 +136,7 @@ export const SideNavigation = styled.div<{ open?: boolean }>`
   height: 100vh;
   overflow-y: scroll;
   width: 100vw;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.94);
   transition: all 0.3s ease;
   padding: 100px 20px;
 

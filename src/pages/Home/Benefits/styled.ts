@@ -12,7 +12,10 @@ export const BenefitsRow = styled.div`
   justify-content: flex-start;
   margin: -120px -15px 0;
   z-index: 2;
-  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 
   & > div {
     flex: 0 0 33.333%;
@@ -23,6 +26,10 @@ export const BenefitsRow = styled.div`
     }
   }
 
+  @media screen and (max-width: 1124px) {
+    overflow-x: scroll;
+  }
+
   @media screen and (max-width: 480px) {
     margin: -120px -8px 0;
   }
@@ -31,6 +38,7 @@ export const BenefitsRow = styled.div`
 export const Card = styled.div`
   min-width: 320px;
   height: 100%;
+  min-height: 260px;
   padding: 35px 40px;
   background: ${({ theme }) => theme.colors.white};
   box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);

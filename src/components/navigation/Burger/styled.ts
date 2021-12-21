@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const CustomBurger = styled.div<{ active?: boolean }>`
+export const CustomBurger = styled.div<{ active?: boolean; darken: number }>`
   display: none;
   
   @media screen and (max-width: 768px) {
@@ -30,6 +30,15 @@ export const CustomBurger = styled.div<{ active?: boolean }>`
       }
     `}
     }
+
+    ${({ darken, active }) =>
+      darken &&
+      !active &&
+      css`
+        span {
+          background: ${darken > 50 && '#fff'};
+        }
+      `}
 `
 
 export const Line = styled.span`
