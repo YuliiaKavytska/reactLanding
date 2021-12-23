@@ -2,17 +2,21 @@ import React from 'react'
 
 import { Container } from 'components/containers/Container/styled'
 import TitleBlock from 'components/sections/TitleBlock'
-import { blockTitles } from 'utils/consts'
+import AdvantageCard from 'pages/Home/Experience/AdvantageCard'
+import { advantageList, blockTitles } from 'utils/consts'
 
-import ProveCards from './ProveCards'
-import { ExperienceSection } from './styled'
+import { CardsRow, ExperienceSection } from './styled'
 
 const Experience = () => {
   return (
-    <ExperienceSection>
+    <ExperienceSection id="Experience">
       <Container>
         <TitleBlock item={blockTitles[0]} />
-        <ProveCards />
+        <CardsRow>
+          {advantageList.map((item, index) => (
+            <AdvantageCard key={index} item={item} />
+          ))}
+        </CardsRow>
       </Container>
     </ExperienceSection>
   )

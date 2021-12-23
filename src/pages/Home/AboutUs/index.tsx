@@ -20,7 +20,7 @@ import {
 
 const AboutUs = () => {
   return (
-    <About>
+    <About id="Advice">
       <Container>
         <TitleBlock item={blockTitles[2]} />
         <Designed>

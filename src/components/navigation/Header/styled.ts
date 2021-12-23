@@ -1,4 +1,5 @@
 import { Link as LinkR } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 import styled, { css } from 'styled-components'
 
@@ -45,14 +46,10 @@ export const StyledHeader = styled.header<{ active: boolean; darken: number }>`
     !active &&
     css`
       color: ${darken > 50 && '#fff'};
-      background: rgba(${hexToRgb(theme.colors.green)}, ${darken < 100 ? darken / 100 - 0.4 : 0.6});
+      background: rgba(${hexToRgb(theme.colors.green)}, ${scrollY < 100 ? darken / 100 - 0.4 : 0.6});
 
       svg path {
         fill: ${darken > 50 && '#fff'};
-      }
-
-      li:hover {
-        color: ${darken > 50 && theme.colors.green};
       }
     `}
 `
@@ -87,11 +84,9 @@ export const Item = styled.li<{ active?: boolean }>`
   justify-content: center;
   font-size: ${pxToRem(14)};
   line-height: ${pxToRem(24)};
-  @media screen and (max-width: 480px) {
-    height: ${pxToRem(60)};
-  }
+  cursor: pointer;
 
-  @media (hover: hover) {
+  @media (any-hover: hover) {
     &:hover {
       color: ${({ theme }) => theme.colors.orange};
     }
@@ -121,9 +116,29 @@ export const Item = styled.li<{ active?: boolean }>`
       }
     `}
 
+  @media screen and (max-width: 480px) {
+    height: ${pxToRem(60)};
+  }
+
   @media screen and (max-width: 768px) {
-    height: 80px;
+    flex: 0 0 80px;
     font-size: ${pxToRem(20)};
+  }
+`
+
+export const ScrollLink = styled(Link)`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+
+  @media (any-hover: hover) {
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    border-bottom: 3px solid ${({ theme }) => theme.colors.orange};
   }
 `
 
@@ -137,8 +152,9 @@ export const SideNavigation = styled.div<{ open?: boolean }>`
   overflow-y: scroll;
   width: 100vw;
   background: rgba(255, 255, 255, 0.94);
+  padding-top: 100px;
+  overflow-y: scroll;
   transition: all 0.3s ease;
-  padding: 100px 20px;
 
   @media screen and (max-width: 768px) {
     display: block;

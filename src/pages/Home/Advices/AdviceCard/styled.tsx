@@ -1,22 +1,9 @@
 import styled, { css } from 'styled-components'
 
 export const AdviceCard = styled.div`
-  flex: 0 1 25%;
-  margin-bottom: 17px;
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: 991px) {
-    flex: 0 1 50%;
-  }
-
-  @media screen and (min-width: 480px) {
-    padding: 0 17px;
-  }
-
-  @media screen and (max-width: 480px) {
-    flex: 1 1 auto;
-  }
+  height: 100%;
 `
 
 export const AdviceBody = styled.div`

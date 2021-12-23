@@ -1,5 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import eot from 'assets/fonts/icomoon.eot'
+import svg from 'assets/fonts/icomoon.svg'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import ttf from 'assets/fonts/icomoon.ttf'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import woff from 'assets/fonts/icomoon.woff'
+
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   
@@ -18,11 +29,11 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'icomoon';
-    src: url('../assets/fonts/icomoon.eot?j0l36a');
-    src: url('../assets/fonts/icomoon.eot?j0l36a#iefix') format('embedded-opentype'),
-    url('../assets/fonts/icomoon.ttf?j0l36a') format('truetype'),
-    url('../assets/fonts/icomoon.woff?j0l36a') format('woff'),
-    url('../assets/fonts/icomoon.svg?j0l36a#icomoon') format('svg');
+    src: url(${eot});
+    src: url(${eot}) format('embedded-opentype'),
+    url(${ttf}) format('truetype'),
+    url(${woff}) format('woff'),
+    url(${svg}) format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;

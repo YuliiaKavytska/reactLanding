@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react'
 import { useCountUp } from 'react-countup'
 import { useIntersection } from 'react-use'
 
-import { Card, CardBody, Count, Icon, Title } from './styled'
+import { Card, CardBody, Count, Icon, Title } from 'pages/Home/Experience/AdvantageCard/styled'
 
 interface IAdvantageCard {
   item: {

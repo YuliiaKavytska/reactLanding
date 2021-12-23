@@ -28,20 +28,17 @@ export const Partners = styled.div`
   @media screen and (max-width: 991px) {
     padding: 25px 0;
   }
-`
 
-export const Partner = styled.div`
-  flex: 0 0 16.666%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  & > div {
+    flex: 0 0 16.666%;
 
-  @media screen and (max-width: 991px) {
-    flex: 0 0 33.333%;
-  }
+    @media screen and (max-width: 991px) {
+      flex: 0 0 33.333%;
+    }
 
-  @media screen and (max-width: 480px) {
-    flex: 0 0 50%;
+    @media screen and (max-width: 480px) {
+      flex: 0 0 50%;
+    }
   }
 `
 

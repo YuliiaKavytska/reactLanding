@@ -9,6 +9,15 @@ import { ReactComponent as FirstIcon } from 'assets/images/common/4.svg'
 import { ReactComponent as SecondIcon } from 'assets/images/common/5.svg'
 import { ReactComponent as ThirdIcon } from 'assets/images/common/6.svg'
 import { ReactComponent as ForthIcon } from 'assets/images/common/7.svg'
+import partner1 from 'assets/images/common/10.svg'
+import partner2 from 'assets/images/common/11.svg'
+import partner3 from 'assets/images/common/12.svg'
+import partner4 from 'assets/images/common/13.svg'
+import partner5 from 'assets/images/common/14.svg'
+import partner6 from 'assets/images/common/15.svg'
+import Img1 from 'assets/images/common/16.svg'
+import Img2 from 'assets/images/common/17.svg'
+import Img3 from 'assets/images/common/18.svg'
 
 export const blockTitles = [
   {
@@ -23,6 +32,11 @@ export const blockTitles = [
   },
   {
     title: 'Practice Advice',
+    subtitle:
+      'Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics'
+  },
+  {
+    title: 'Get In Touch',
     subtitle:
       'Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics'
   }
@@ -95,3 +109,30 @@ export const adviceList = [
     img: Advice4
   }
 ]
+
+export const footerContacts = [
+  {
+    title: 'Company Info',
+    list: ['About Us', 'Carrier', 'We are hiring', 'Blog']
+  },
+  {
+    title: 'Legal',
+    list: ['About Us', 'Carrier', 'We are hiring', 'Blog']
+  },
+  {
+    title: 'Features',
+    list: ['Business Marketing', 'User Analytic', 'Live Chat', 'Unlimited Support']
+  },
+  {
+    title: 'Resources',
+    list: ['IOS & Android', 'Watch a Demo', 'Customers', 'API']
+  }
+]
+
+export const stuffContacts = [
+  { img: Img1, contactsList: ['georgia.young@example.com', 'georgia.young@ple.com'] },
+  { img: Img2, contactsList: ['georgia.young@example.com', 'georgia.young@ple.com'] },
+  { img: Img3, contactsList: ['georgia.young@example.com', 'georgia.young@ple.com'] }
+]
+
+export const partnersList = [partner1, partner2, partner3, partner4, partner5, partner6]

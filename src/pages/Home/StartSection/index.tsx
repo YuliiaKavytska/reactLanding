@@ -10,7 +10,7 @@ import { Actions, Content, Section, Subtitle, Title } from './styled'
 
 const StartSection = () => {
   return (
-    <Section>
+    <Section id="Home">
       <Container>
         <Content>
           <Title>
@@ -27,8 +27,12 @@ const StartSection = () => {
             />
           </Subtitle>
           <Actions>
-            <Button>Get Quote Now</Button>
-            <Button outlined>Learn More</Button>
+            <Button rounded orange fill>
+              Get Quote Now
+            </Button>
+            <Button rounded outlined green>
+              Learn More
+            </Button>
           </Actions>
         </Content>
       </Container>

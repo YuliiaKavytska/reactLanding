@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/reactLanding/static/js/main.2089116a.chunk.js",
-    "main.js.map": "/reactLanding/static/js/main.2089116a.chunk.js.map",
+    "main.js": "/reactLanding/static/js/main.d584fc28.chunk.js",
+    "main.js.map": "/reactLanding/static/js/main.d584fc28.chunk.js.map",
     "runtime-main.js": "/reactLanding/static/js/runtime-main.e6a005e4.js",
     "runtime-main.js.map": "/reactLanding/static/js/runtime-main.e6a005e4.js.map",
     "static/css/2.561d7928.chunk.css": "/reactLanding/static/css/2.561d7928.chunk.css",
@@ -11,12 +11,24 @@
     "static/css/2.561d7928.chunk.css.map": "/reactLanding/static/css/2.561d7928.chunk.css.map",
     "static/js/2.eec8b413.chunk.js.LICENSE.txt": "/reactLanding/static/js/2.eec8b413.chunk.js.LICENSE.txt",
     "static/media/1.189299ff.svg": "/reactLanding/static/media/1.189299ff.svg",
+    "static/media/1.aa59b12b.jpg": "/reactLanding/static/media/1.aa59b12b.jpg",
+    "static/media/10.66934f80.svg": "/reactLanding/static/media/10.66934f80.svg",
+    "static/media/11.5ad5af69.svg": "/reactLanding/static/media/11.5ad5af69.svg",
+    "static/media/12.4c4a79ac.svg": "/reactLanding/static/media/12.4c4a79ac.svg",
+    "static/media/13.8ac8bea2.svg": "/reactLanding/static/media/13.8ac8bea2.svg",
+    "static/media/14.23e3a49a.svg": "/reactLanding/static/media/14.23e3a49a.svg",
+    "static/media/15.ae433459.svg": "/reactLanding/static/media/15.ae433459.svg",
+    "static/media/2.4a375759.jpg": "/reactLanding/static/media/2.4a375759.jpg",
     "static/media/2.8bd4945a.svg": "/reactLanding/static/media/2.8bd4945a.svg",
     "static/media/3.3c0fbf87.svg": "/reactLanding/static/media/3.3c0fbf87.svg",
+    "static/media/3.a53a46ae.jpg": "/reactLanding/static/media/3.a53a46ae.jpg",
+    "static/media/4.2a1fb8de.jpg": "/reactLanding/static/media/4.2a1fb8de.jpg",
     "static/media/4.642d63e4.svg": "/reactLanding/static/media/4.642d63e4.svg",
     "static/media/5.fc172ef7.svg": "/reactLanding/static/media/5.fc172ef7.svg",
     "static/media/6.dedab072.svg": "/reactLanding/static/media/6.dedab072.svg",
     "static/media/7.1eb33fef.svg": "/reactLanding/static/media/7.1eb33fef.svg",
+    "static/media/8.d0353f13.svg": "/reactLanding/static/media/8.d0353f13.svg",
+    "static/media/9.2c24b237.svg": "/reactLanding/static/media/9.2c24b237.svg",
     "static/media/bg.67bafa05.jpg": "/reactLanding/static/media/bg.67bafa05.jpg",
     "static/media/logo.52307a67.svg": "/reactLanding/static/media/logo.52307a67.svg"
   },
@@ -24,6 +36,6 @@
     "static/js/runtime-main.e6a005e4.js",
     "static/css/2.561d7928.chunk.css",
     "static/js/2.eec8b413.chunk.js",
-    "static/js/main.2089116a.chunk.js"
+    "static/js/main.d584fc28.chunk.js"
   ]
 }

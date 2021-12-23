@@ -85,6 +85,7 @@ export const Subtitle = styled.div`
   line-height: 143%;
   letter-spacing: 0.2px;
   margin-top: 15px;
+
   ${({ theme }) => css`
     color: ${theme.colors.gray[1]};
   `}
@@ -129,6 +130,7 @@ export const ItemText = styled.div`
   line-height: 171%;
   letter-spacing: 0.2px;
   margin-top: 7px;
+
   ${({ theme }) => css`
     color: ${theme.colors.gray[1]};
   `}

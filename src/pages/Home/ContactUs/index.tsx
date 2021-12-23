@@ -14,7 +14,7 @@ const ContactUs = () => {
             <ConsultText>Consulting Agency For Your Business</ConsultText>
             <ConsultSubtitle>the quick fox jumps over the lazy dog</ConsultSubtitle>
           </Consulting>
-          <Button onClick={() => console.log('Contact')} squared>
+          <Button onClick={() => console.log('Contact')} fill orange>
             Contact Us
           </Button>
         </ContactBody>

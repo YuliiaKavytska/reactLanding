@@ -6,8 +6,8 @@ import { Container } from 'components/containers/Container/styled'
 import { ReactComponent as Logo } from 'assets/images/common/logo.svg'
 
 import Burger from '../Burger'
-import { HeaderNavigation } from '../HeaderNavigation'
 
+import { HeaderNavigation } from './HeaderNavigation'
 import { HeaderContainer, LogoLink, NavigationList, SideNavigation, StyledHeader } from './styled'
 
 const Header = () => {
@@ -34,7 +34,7 @@ const Header = () => {
         </HeaderContainer>
       </Container>
       <SideNavigation open={active}>
-        <HeaderNavigation />
+        <HeaderNavigation closeBurger={toggleActive} />
       </SideNavigation>
     </StyledHeader>
   )

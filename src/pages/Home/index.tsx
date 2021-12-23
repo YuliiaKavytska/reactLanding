@@ -6,6 +6,7 @@ import Benefits from './Benefits'
 import ContactUs from './ContactUs'
 import Experience from './Experience'
 import StartSection from './StartSection'
+import StuffContact from './StuffContact'
 import Subscribe from './Subscribe'
 
 const Home: FC = () => {
@@ -17,6 +18,7 @@ const Home: FC = () => {
       <Advices />
       <AboutUs />
       <Subscribe />
+      <StuffContact />
       <ContactUs />
     </>
   )

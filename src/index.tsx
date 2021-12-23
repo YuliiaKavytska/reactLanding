@@ -12,6 +12,7 @@ import store from './store'
 
 import 'normalize.css'
 import 'animate.css/animate.compat.css'
+import 'animate.css/animate.css'
 
 ReactDOM.render(
   <React.StrictMode>

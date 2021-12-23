@@ -9,13 +9,13 @@ import { AdvicesBody, AdvicesContainer, AdvicesList } from './styled'
 
 const Advices = () => {
   return (
-    <AdvicesContainer>
+    <AdvicesContainer id="About">
       <Container>
         <AdvicesBody>
           <TitleBlock item={blockTitles[1]} />
           <AdvicesList>
             {adviceList.map((item, i) => (
-              <Advice key={i} item={item} />
+              <Advice key={i} item={item} i={i} />
             ))}
           </AdvicesList>
         </AdvicesBody>

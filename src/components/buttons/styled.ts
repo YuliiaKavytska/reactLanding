@@ -2,15 +2,21 @@ import styled, { css } from 'styled-components'
 
 import { LightenDarkenColor, pxToRem } from 'utils/helpers'
 
-export const CustomButton = styled.button<{ outlined?: boolean; squared?: boolean }>`
+export const CustomButton = styled.button<{
+  outlined?: boolean
+  rounded?: boolean
+  green?: boolean
+  fill?: boolean
+  orange?: boolean
+}>`
   min-width: 100px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: ${pxToRem(14)};
   line-height: ${pxToRem(20)};
   padding: ${pxToRem(14)} ${pxToRem(36)};
-  border-radius: 37px;
+  border-radius: 5px;
   border: 1px solid inherit;
   transition: all 0.3s ease;
   outline: none;
@@ -22,35 +28,46 @@ export const CustomButton = styled.button<{ outlined?: boolean; squared?: boolea
 
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.orange};
-    background-color: ${theme.colors.orange};
-    color: ${theme.colors.white};
-
-    @media (any-hover: hover) {
-      &:hover {
-        border: 1px solid ${LightenDarkenColor(theme.colors.orange, -40)};
-        background: ${LightenDarkenColor(theme.colors.orange, -40)};
-      }
-    }
+    color: ${theme.colors.orange};
   `}
 
-  ${({ outlined, theme }) =>
-    outlined &&
-    css`
-      border: 1px solid ${theme.colors.green};
-      background: transparent;
-      color: ${theme.colors.green};
+  ${({ outlined, orange, green, theme }) => {
+    const color = orange ? 'orange' : green ? 'green' : 'white'
 
-      &:hover {
-        border-color: ${theme.colors.green};
-        background: ${theme.colors.green};
-        color: ${theme.colors.white};
-      }
-    `}
+    return (
+      outlined &&
+      css`
+        border: 1px solid ${theme.colors[color]};
+        color: ${theme.colors[color]};
+        background: transparent;
+
+        &:hover {
+          border-color: ${theme.colors[color]};
+          background: ${theme.colors[color]};
+          color: ${color === 'white' ? theme.colors.black : theme.colors.white};
+        }
+      `
+    )
+  }}
   
-  ${({ squared }) =>
-    squared &&
+  ${({ rounded }) =>
+    rounded &&
     css`
-      border-radius: 5px;
+      border-radius: 37px;
+    `}
+
+  ${({ theme, orange, fill }) =>
+    fill &&
+    css`
+      background-color: ${fill && theme.colors[orange ? 'orange' : 'green']};
+      color: ${theme.colors.white};
+
+      @media (any-hover: hover) {
+        &:hover {
+          border: 1px solid ${LightenDarkenColor(theme.colors[orange ? 'orange' : 'green'], -40)};
+          background: ${LightenDarkenColor(theme.colors[orange ? 'orange' : 'green'], -40)};
+        }
+      }
     `}
   
   @media screen and (max-width: 768px) {
